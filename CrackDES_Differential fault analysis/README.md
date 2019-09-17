@@ -47,7 +47,7 @@ Avec K16  on pourra retrouver K en effectuant le processus inverse de la génér
 Avec le K16 précédemment trouvé, on pourra retrouver la complète de 64 bits.
 En effet les 64 bits ne sont pas t=tous utilisé. Au début de la génération des clés, on effectue un permutation PC1  sur la clé. Puis on obtient un clé de 56 bits (8 bit qui sont des bit de parité sont retirés). Ensuite ses 56 bits passent par une seconde  permutation  PC2 , après  leur décalage à gauche i bits, puis on obtient une clé de 48 bit qui sera utiliser dans un tours du DES( 8 bits sont alors perdu). Cette dernière étape est réalisée à chaque tour en variant la valeur de i de 1 à 2 selon le tour. 
 
-	La liste ci dessous récapitule le nombre de bit décalé par tour :
+La liste ci dessous récapitule le nombre de bit décalé par tour :
   
 
 	1 ----> 1
