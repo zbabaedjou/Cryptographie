@@ -46,25 +46,26 @@ Avec K16  on pourra retrouver K en effectuant le processus inverse de la génér
 ## Détermination de K Complet
 Avec le K16 précédemment trouvé, on pourra retrouver la complète de 64 bits.
 En effet les 64 bits ne sont pas t=tous utilisé. Au début de la génération des clés, on effectue un permutation PC1  sur la clé. Puis on obtient un clé de 56 bits (8 bit qui sont des bit de parité sont retirés). Ensuite ses 56 bits passent par une seconde  permutation  PC2 , après  leur décalage à gauche i bits, puis on obtient une clé de 48 bit qui sera utiliser dans un tours du DES( 8 bits sont alors perdu). Cette dernière étape est réalisée à chaque tour en variant la valeur de i de 1 à 2 selon le tour. 
-	Le tableau ci dessous récapitule le nombre de bit décalé par tour :
+
+	La liste ci dessous récapitule le nombre de bit décalé par tour :
   
 
-1 ----> 1
-2 ----> 1
-3 ----> 2
-4 ----> 2
-5 ----> 2
-6 ----> 2
-7 ----> 2
-8 ----> 2
-9 ----> 1
-10 ---> 2
-11 ---> 2
-12 ---> 2
-13 ---> 2
-14 ---> 2
-15 ---> 2
-16 ---> 1
+	1 ----> 1
+	2 ----> 1
+	3 ----> 2
+	4 ----> 2
+	5 ----> 2
+	6 ----> 2
+	7 ----> 2
+	8 ----> 2
+	9 ----> 1
+	10 ---> 2
+	11 ---> 2
+	12 ---> 2
+	13 ---> 2
+	14 ---> 2
+	15 ---> 2
+	16 ---> 1
 
 
 Au 16ème tour, le nombre de décalage fait 2^8 et vu que le décalage est fait sur chaque bit de 2^8 bits de la clé de 56 bits, chaque bits revient à ça place initiale. Et donc la clé  K16  correspond à  K1. 
